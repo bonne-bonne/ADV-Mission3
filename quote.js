@@ -42,24 +42,8 @@ function quote(carValue, riskRating){
 }
 
 
-// const example = '$8400';
-
-// const onlyNumbers = example.replace(/[^\d.]/g, '');
-// const floated = float(onlyNumbers)
-// console.log(onlyNumbers); 
-// console.log(typeof onlyNumbers)
-
-// console.log(parseFloat("3000.99"))
 
 
 module.exports = quote
 
 
-// console.log(quote(7530, 2))
-// console.log(quote(15300, 0))
-// console.log(quote(8350, 6))
-// console.log(quote(6400, 'three'))
-// console.log(quote('six thousand', 2))
-// console.log(quote(-2000, 5))
-// console.log(quote(4700, -1))
-// console.log(quote(5))
