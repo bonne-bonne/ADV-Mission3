@@ -2,6 +2,7 @@ const express = require("express");
 const env = require("dotenv");
 
 const quote = require("./quote");
+const rating = require("./rating");
 
 
 env.config();
@@ -10,7 +11,7 @@ app.use(express.json());
 
 //========================= ENDPOINTS ==================================//
 
-
+//API 3
 app.post('/quote', (req, res) =>{
     const car_value = req.body.car_value;
     const risk_rating = req.body.risk_rating;
@@ -22,6 +23,18 @@ app.post('/quote', (req, res) =>{
 })
 
 
+
+//Testing for API 2
+
+
+app.post('/rating', (req, res) =>{
+    const claim_history = req.body.claim_history;
+    const ratingContent = req.body
+
+    console.log(ratingContent)
+
+    res.send(rating(claim_history))
+})
 
 //========================= PORT ==================================//
 const PORT = process.env.PORT || 4002
