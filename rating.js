@@ -1,34 +1,37 @@
 function rating(claimHistory) {
   const claim_history = claimHistory;
-  const numOfMatches = [];
-  let totalMatches = 0;
+  const num_of_matches = [];
+  let total_matches = 0;
 
   console.log(`this is a the string received: ${claim_history}`);
 
-  if (!claimHistory || typeof claimHistory !== "string"){
+  if (!claim_history || typeof claim_history !== "string"){
     return "Invalid input"
   }
   
-  if (claimHistory &&  typeof claimHistory === "string") {
-    const countCollide = (claim_history.match(/collide/g) || []).length;
-    const countCrash = (claim_history.match(/crash/g) || []).length;
-    const countScratch = (claim_history.match(/scratch/g) || []).length;
-    const countBump = (claim_history.match(/bump/g) || []).length;
+  if (claim_history &&  typeof claim_history === "string") {
+    const count_collide = (claim_history.match(/collide/g) || []).length;
+    const count_crash = (claim_history.match(/crash/g) || []).length;
+    const count_scratch = (claim_history.match(/scratch/g) || []).length;
+    const count_bump = (claim_history.match(/bump/g) || []).length;
 
     
-    numOfMatches.push(...[countCollide, countCrash, countScratch, countBump])
-    console.log(numOfMatches);
+ num_of_matches.push(...[count_collide, count_crash, count_scratch, count_bump])
+    console.log (num_of_matches);
   }
 
-  numOfMatches.forEach(num => {
-    totalMatches += num
+ num_of_matches.forEach(num => {
+    total_matches += num
   })
 
-  if(totalMatches > 5){
-    totalMatches = 5
+  if(total_matches > 5){
+    total_matches = 5
+  }
+  if (total_matches === 0){
+    total_matches = 1
   }
 
-  return { "risk_rating": totalMatches }
+  return { "risk_rating": total_matches }
 
 
 }

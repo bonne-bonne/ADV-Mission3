@@ -22,13 +22,9 @@ const testCases = [
         scenario: "No claims",
         claim_history: "I have made no claims.",
         expected: {
-            "risk_rating": 0
+            "risk_rating": 1
         },
     },
-
-  
-
-
 
 ]
 

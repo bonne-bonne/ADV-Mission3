@@ -24,14 +24,12 @@ app.post('/quote', (req, res) =>{
 
 
 
-//Testing for API 2
-
-
+//API 2
 app.post('/rating', (req, res) =>{
     const claim_history = req.body.claim_history;
-    const ratingContent = req.body
+    const rating_content = req.body
 
-    console.log(ratingContent)
+    console.log(rating_content)
 
     res.send(rating(claim_history))
 })
