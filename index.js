@@ -18,17 +18,8 @@ app.post('/quote', (req, res) =>{
 
     console.log(content)
 
-    // console.log(req)
     res.send(quote(car_value,risk_rating))
-    // res.sendStatus(200)
 })
-
-
-
-
-
-
-
 
 
 
@@ -37,3 +28,5 @@ const PORT = process.env.PORT || 4002
 app.listen(PORT, () => {
     console.log(`listening on PORT ${PORT}`)
 })
+
+
