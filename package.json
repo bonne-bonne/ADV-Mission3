@@ -4,7 +4,7 @@
   "description": "Mission 3 Api",
   "main": "index.js",
   "scripts": {
-    "test": "jest && mocha",
+    "test": "jest",
     "start": "nodemon index.js"
   },
   "author": "Bonnie",
